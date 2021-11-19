@@ -1,4 +1,4 @@
-![boca](https://user-images.githubusercontent.com/24438483/142631409-107a8c31-b3ea-4db9-959c-2f1c1ba5e844.png)
+![boca](https://user-images.githubusercontent.com/24438483/142643170-f090e1a8-732a-4dbd-9f16-ca3dfb0426b1.png)
 
 [![npm](https://img.shields.io/npm/v/boca?color=blue)](https://npmjs.com/package/boca)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/boca?color=success)](https://bundlephobia.com/package/boca)
