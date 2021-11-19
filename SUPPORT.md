@@ -1,8 +1,8 @@
 # Support
 
-> We have a [code of conduct](CODE_OF_CONDUCT.md). By interacting with this repository, you agree to abide by its terms.
+> We have a [code of conduct](https://github.com/moducate/.github/blob/main/CODE_OF_CONDUCT.md). By interacting with this repository, you agree to abide by its terms.
 
-Hi! 👋 We’re excited that you’re using **Moducate** and we’d love to help.
+Hi! 👋 We’re excited that you’re using **Boca** (a Moducate OSS project) and we’d love to help.
 
 To help us help you, please read through the following guidelines.
 

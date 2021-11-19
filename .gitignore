@@ -1,7 +1,5 @@
 # Dotfiles
 .*
-!/.gitignore
-!/.devcontainer
 
 # Editors
 ## IDEA
@@ -98,5 +96,14 @@ $RECYCLE.BIN/
 /CVS/*
 **/CVS/*
 
+# Node
+node_modules
+dist
+coverage
+junit
+
 # Exceptions
+!.circleci
 !.editorconfig
+!.gitignore
+!.gitpod.yml

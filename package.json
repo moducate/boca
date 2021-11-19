@@ -1,0 +1,134 @@
+{
+  "name": "boca",
+  "version": "0.1.0",
+  "description": "Zero-config environment variable parser for twelve-factor apps",
+  "keywords": [
+    "config",
+    "enviroment-variables",
+    "twelve-factor"
+  ],
+  "homepage": "https://github.com/moducate/boca#readme",
+  "bugs": "https://github.com/moducate/boca/issues",
+  "repository": "moducate/boca",
+  "license": "MIT",
+  "author": "Luke Carr <luke@moducate.app>",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "siroc build",
+    "changelog": "gitmoji-changelog",
+    "lint": "yarn lint:eslint",
+    "lint:eslint": "eslint --ext .ts --fix .",
+    "prepack": "yarn build",
+    "test": "jest"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx --no-install lint-staged && npx --no-install yaspeller README.md",
+    "commit-msg": "npx --no-install commitlint --edit"
+  },
+  "commitlint": {
+    "extends": [
+      "gitmoji"
+    ],
+    "rules": {
+      "type-empty": [
+        0
+      ],
+      "subject-empty": [
+        0
+      ]
+    }
+  },
+  "lint-staged": {
+    "{src,test}/**/*.ts": [
+      "eslint --fix"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "@nuxtjs/eslint-config-typescript"
+    ],
+    "rules": {
+      "no-redeclare": "off",
+      "@typescript-eslint/no-redeclare": [
+        "error"
+      ]
+    }
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ],
+    "preset": "ts-jest",
+    "reporters": [
+      "default",
+      "jest-junit"
+    ],
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "read-env": "^2.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@nuxtjs/eslint-config-typescript": "^7.0.2",
+    "@size-limit/preset-small-lib": "^7.0.0",
+    "@types/jest": "^27.0.2",
+    "commitlint-config-gitmoji": "^2.2.5",
+    "eslint": "^8.2.0",
+    "fast-json-stringify": "^2.7.12",
+    "gitmoji-changelog": "^2.2.1",
+    "jest": "^27.3.1",
+    "jest-junit": "^13.0.0",
+    "lint-staged": "^12.0.2",
+    "simple-git-hooks": "^2.7.0",
+    "siroc": "^0.16.0",
+    "size-limit": "^7.0.0",
+    "ts-jest": "^27.0.7",
+    "typescript": "^4.4.4",
+    "yaspeller": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=10.24"
+  },
+  "jest-junit": {
+    "outputDirectory": "junit"
+  },
+  "size-limit": [
+    {
+      "name": "$parse",
+      "import": "{ $parse }",
+      "limit": "500 B"
+    }
+  ],
+  "yaspeller": {
+    "ignoreCapitalization": true,
+    "dictionary": [
+      "templating",
+      "3xx",
+      "gzipped",
+      "generics",
+      "Fastify",
+      "js",
+      "shakeable",
+      "stringify",
+      "Boca's",
+      "NPM",
+      "sourced",
+      "SVGBackgrounds",
+      "Boca"
+    ]
+  }
+}
