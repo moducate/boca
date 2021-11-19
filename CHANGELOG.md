@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="0.1.1"></a>
+## 0.1.1 (2021-11-19)
+
+### Miscellaneous
+
+- 📄 Updated README banner [[4e873eb](https://github.com/moducate/boca/commit/4e873ebeba3317c6a20897ef6ee7a26503f53e01)]
+
+
 <a name="0.1.0"></a>
 ## 0.1.0 (2021-11-19)
 
